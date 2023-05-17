@@ -34,12 +34,44 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '2158743873';
+    var serviceWorkerVersion = '724288171';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+<style>
+h1 {text-align: center;}
+h2 {text-align: center;}
+p {text-align: center;}
+div, iframe {text-align: center;}
+body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            <!--position: absolute;
+            top: 50%;
+            transform: translateY(50%)-->;
+        }
+        iframe {
+            width: 555px;
+            max-width: 170%;
+            height: 333px;
+            max-height: 100%;
+            <!--position: absolute;-->
+        }
+</style>
+
 </head>
-<body>
+<body id="body">
+<h1 style="color: black; font-family: Arial, Helvetica, sans-serif">
+  This is the loading screen... test...</h1>
+<h2 style="color: black; font-family: Arial, Helvetica, sans-serif">
+  Winking Presents </h2>
+<img width="'222"  src="assets/assets/images/result_you_are_best1.gif">
+<h2 style="color: black; font-family: Arial, Helvetica, sans-serif">
+    　 </h2>
+<!--<iframe width="'555" height="333" src="https://www.youtube.com/embed/uNcdLm420RI?start=22&end=53&autoplay=1&mute=1&controls=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -49,6 +81,7 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
+            <!--document.getElementById("body").style.top="0%";-->
             appRunner.runApp();
           });
         }
